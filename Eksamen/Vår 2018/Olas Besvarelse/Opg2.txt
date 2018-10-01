@@ -1,0 +1,35 @@
+﻿KandidatNummer: 22
+
+Oppgave 2
+
+2a: En assosiativ tabell i PHP er en tabell som kan være Mappet med KEY og VALUE.
+Tabellen inneholder typisk mange forskjellige KEY's som igjen inneholder en spesifik value.
+Vi kan tenke oss at KEY med navn "AntallMål" inneholder en INT som viser hvor mange mål som er scoret i en kamp.
+
+2b: Forskjellen på å bruke $_POST og $_REQUEST er blandt annet at det er to forskjellige tabeller.
+Det kan være at de på et tidspunkt inneholder de samme variablene, men om du endrer en variabel i $_POST så vil ikke den være endret i $_REQUEST i samme sesjon. $_REQUEST inneholder i tillegg til alle $_POST variablene, alle $_GET-variabler og alle av en type til. $_REQUEST er en samling av variabler fra flere instanser og $_POST er en delsamling som kun inneholder det som er sendt over i et skjema via et form med method='post'
+
+2c: Når man bruker Session-variabler i php oppnår man muligheten til å lage dynamiske nettsider og nettsider hvor du kan navigere deg rundt uten å miste verdifull data lagret fra tidliger nettsider. 
+Når du klikker en lenke på en nettside kan du få en annen nettside enn en helt annet bruker basert på Session-variabler som er lagret i $_SESSION[]-tabellen. Web-serveren bestemmer hvilket innhold som skal genereres ved hjelp av php og sender dette til brukeren. Et eksempel kan være at jeg er logget inn og du ikke er logget inn på en konkurranse-side. Jeg får opp muligheten til å delta i konkurransen, mens du får opp et registrering og innloggings-side.
+Når jeg nevner lagring av data så tenker jeg på at du kan navigere deg rundt på en nettside og nettsiden har forstått at det er du som navigerer deg rundt. Som eksempel kan du tenke deg en nettbank eller en nettbutikk. I nettbanken så kan du navigere deg mellom forskjellige tjenester og kontoer uten å måtte logge inn for hver side. Nettsiden lagrer data i Session-variabler som sjekker hvem som er innlogget og om du er innlogget. En nettbutikk kan huske på hvilke varer du har lagt i en handlekurv ved å fylle opp en tabell lagret i Session-variabler. Det er slik man kan navigere seg mellom flere kundesider uten å miste dataen lagret i handlekurven.
+
+2d: BEFORE-TRIGGERE er fine å bruke når du må sjekke opp noe før noe er blitt lagt til i en tabell. Et eksempel kan være om du har skrevet inn lovlig data, om du har skrevet inn for mye eller for lite data, at du har overskrevet et antall lovlige registreringer eller andre typer av restrictions som man kan tenke seg. Eksempel kan være: Det er ikke log å registrere mer enn 5 feriedager i ferietabellen. En bruker som forsøker å lagre den sjette feriedagen vil få problemer med en before-trigger. Her kan det da sendes SIGNAL fra triggeren.
+AFTER-TRIGGERE er gode når man skal utføre noe basert på det som er lagt inn i en tabell. Det kan for eksempel være at man skal oppdatere andre tabeller med innhold, det kan være at man skal ta en backup når noe nytt er lagt inn. Vi kan se for oss at vi legger til en ny rad i tabellen Poeng. Vi har en annen tabell som heter TotalPoeng hvor alle poengene er blitt lagt sammen per bruker. Vi kan nå oppdatere denne tabellen ETTER at vi har registrert en ny poengSum slik at totalSummen blir oppdatert.
+SIGNAL-handling er når vi kaster unntak i SQL. Vi setter en SIGNAL-kode og en SignalMessage for å forklare brukeren hva som er galt. 
+
+2e: Dette gjør man når man skal mellomlagre en variabel. Når du er inne i en procedyre så kan det være at du må gjøre flere sjekker. Du kan for eksempel måtte gjøre en spørring, lagre resultatet og så gjøre flere spørringer. Dersom du har bruk for å lagre resultatet av en av spørringene til senere så kan du bruke SELECT INTO. Ellers kan det være du har en OUT-variabel som trenger innhold. Du kan også plassere data inn i denne som du igjen kan hente ved SELECT @var etterpå.
+
+2f: HTML Pattern kan du bruke når du i et inputfelt kun skal ha lov til å skrive på en forhåndsdefinert måte. Det kan for eks være at du kun har lov til å bruke tegn mellom a-h eller tall mellom 2-8. Dette definerer du ved patter="" som attributt. Det finnes forhåndsdefinerte slike atributter i input. Eksempel på dette er input types. Types kan være "number", "date", "email" osv som er forhåndsdefinerte.
+Javascript lar deg også sjekke innholdet på forskjellige steder i DOM'et. Du kan hente ut tekst fra et felt og bruke metoder som regex.test(var) hvor regex er et forhåndsdefinert regulært utrykk og var er en string. Du kan også bruke andre metoder i Javascript for å sjekke om Stringer er av en gitt type.
+I PHP kan du også bruke metoder og regulære utrykk som i javascript. En vanlig inndatavalideringsteknikk er å bruke HTMLEntities for å unngå CrossSiteScripting. Vi bruker mysqli-metoder for å forhindre SQL-injection. Det er viktig å gjøre slike tester på serversiden ettersom det er måter å unngå både Javascript og HTML-valideringen. Jeg vil si at Javascript og HTML-validering er mest for brukergrensesnittet og PHP-validering er for sikkerheten.
+
+2g:DOM er hele dokumentets struktur som webserveren sender til klientene. Det er DOMET som nettleserne tolker og representerer for brukeren. Inneholdet i DOM er HTML-kode som kan manipuleres ved bruke av Javascript fra klientsiden.
+
+2h: Fordeler med å bruke JQuery-bibloteket er at det inneholder forhåndslagete metoder. Da slipper du å lage en dårlig metode av noe som det finnes en god av fra før. Du kan også sette sammen deler av Jquery til å lage dine egne funksjoner. JQuery er kjent over hele verden og det er et felles biblotek som gjør at man snakker det samme språket i metodene uansett hvor man er i verden. Dette gjør det enklere å overføre data fra systemer til nye systemer og andre steder. JQuery hånderer også ajax på en god måte for brukern slik at brukeren ikke trenger å tenke på dette. Koden blir enklere å lese da metodene er selforklarende.
+
+2i:Fordeler med å bruke ORM er at databasen kan fungere som et virtult objekt du prater med. Et ORM-biblotek inneholder allerede metoder for å utføre forskjellige spørrnger slik at du slipper å skrive disse selv. Du kan også bruke ORM-biblotek i forskjellige programmeringsspråk ettersom ORM da er laget for å tolke de forskjellige språkene opp mot SQL-språket. I praksis så kontakter du et ORMobjekt istedet for å kode SQL direkte mot basen.
+
+2j:En AJAX-basert webapplikasjon er en applikasjon som basere seg på kontakt mellom webserveren og klienten ved hjelp av Javascript uten at brukeren bytter URL. Dette gjør at brukeren opplever applikasjonen som dynamisk på en URL. Klienten sender ut mange forskjellige http-requests til WEB-serveren og serveren responderer med svar til klienten. Ved hjelp av javascript og AJAX-teknikker oppdateres klienten for brukeren basert på hva brukeren trigger for requests.
+
+
+

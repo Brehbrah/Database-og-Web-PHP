@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+
+    	<h1>Oppgave 1a - Vise HTML Skjema </h1>
+    	<h2>Starte ny Golfrunde</h2>
+
+    	<form action="oppg1a-2.php" id="regSkjema" method="GET" accept-charset="utf-8">
+    		<p>
+				<label>Golfbane: </label>
+					<select name="golfbane">
+    					<option value="1">Norsjø</option>
+    					<option value="2">Stavern</option>
+    					<option value="3">Bogstad</option>
+					</select>
+				<label>Dato: </label>
+				<input type="text" id="dato" name="dato" placeholder="Angi YYYY-MM-DD">
+    		</p>
+    		<p>
+			<label>Spillere: </label>
+				<input type="text" id="spiller" name="spiller1" placeholder="Spillernummer 1" size="15">
+				<input type="text" id="spiller" name="spiller2" placeholder="Spillernummer 2" size="15">
+				<input type="text" id="spiller" name="spiller3" placeholder="Spillernummer 3" size="15">
+				<input type="text" id="spiller" name="spiller4" placeholder="Spillernummer 4" size="15">
+    		</p>
+    		<p>
+    			<button type="submit" name="submit" id="submit">Ny Golfrunde</button>
+    		</p>
+    		<p>
+    			<div id="melding"></div>
+    		</p>
+    	</form>
+        
+        <!--<script src="oppg1a.js"></script>-->
+    </body>
+</html>

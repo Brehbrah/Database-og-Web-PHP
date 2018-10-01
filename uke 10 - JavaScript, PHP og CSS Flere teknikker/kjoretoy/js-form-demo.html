@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Databaser og web</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="js-form-demo.css" />
+<script src="js-form-demo.js"></script>
+</head>
+
+<body>
+
+<h1>Registrering av kjøretøy</h1>
+
+<p>De to listene for merke og modell burde "samordnes" (kun 242 og 760 er aktuelt hvis bruker velger Volvo). Dette kan gjøres med JavaScript...</p>
+
+<form id="skjema" name="form1" 
+  action="js-form-demo.php" method="post" 
+	onsubmit="return sjekkSkjema()">
+	  
+  <div class="felt">
+    <label>RegNr:</label> 
+	  <input type="text" name="regnr" id="regnr">
+  </div>
+  
+  <div class="felt">
+    <label>Merke:</label>
+	  <select name="merke">
+      <option value="volvo">Volvo</option>
+      <option value="toyota">Toyota</option>
+      <option value="saab">Saab</option>
+    </select>
+  </div>
+
+  <div class="felt">
+    <label>Modell:</label>
+    <select name="modell">
+      <option value="242">242</option>
+      <option value="760">760</option>
+      <option value="Avensis">Avensis</option>
+      <option value="Sonett">Sonett</option>
+      <option value="Toad">Toad</option>
+    </select>
+  </div>
+  
+  <div class="felt">
+    <label>År:</label>
+	  <input type="text" name="aar" id="aar">
+  </div>
+  
+  <div class="felt">
+    <input id="submit" type="submit" value="Registrer kjøretøy!">
+  <div class="felt">
+  
+  <div id="melding"></div>
+  
+</form>
+
+</body>
+</html>

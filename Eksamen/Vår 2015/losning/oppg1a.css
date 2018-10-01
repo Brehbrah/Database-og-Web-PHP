@@ -1,0 +1,11 @@
+.obligatorisk, .valgfri { 
+  padding: 5px; 
+}
+
+.obligatorisk label { 
+  font-weight: bold;
+}
+
+#melding {
+  color: red;
+}

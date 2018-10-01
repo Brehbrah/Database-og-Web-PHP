@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+					
+    </head>
+    <body>
+
+    	<h1>Oppgave 1 - Registrere Skjema</h1>
+        
+        <form id="regSkjema" action="oppg1b.php" method="POST" accept-charset="utf-8">
+        	<table border ="0" style="text-align: left">
+        		<tr>
+        			<th>Fornavn: </th>
+        			<td><input type="text" name="fornavn" placeholder="Ditt Fornavn"></td>
+        		</tr>
+
+        		<tr>
+        			<th>Etternavn:</th>
+        			<td><input type="text" name="etternavn" placeholder="Ditt etternavn"></td>
+        		</tr>
+        		<tr>
+        			<th>Fødselsdato: </th>
+        			<td><input type="text" name="dato" placeholder="YYYY-MM-DD"></td>
+        		</tr>
+        		<tr>
+        			<th>Kjønn</th>
+        			<td><input type="text" id="kjønn" name="kjønn" placeholder="Må være M eller K"></td>
+        		</tr>
+        	</table>
+        	<div class="melding"></div>
+        	<p>
+        		<input type="submit" id="submit" name="submit" value="Send Forespørsel">
+        		<button type="reset">Rensk Skjema</button>
+        	</p>
+        </form>
+        <script src="oppg1a.js"></script>
+    </body>
+</html>

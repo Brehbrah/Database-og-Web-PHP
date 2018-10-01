@@ -1,0 +1,17 @@
+KandidatNummer: 22
+
+OBS OBS! Jeg sikrer kun for SQL INJECTION 1 gang fordi det tar lenger tid og jeg må spare tid på eksamen. Jeg gjøre dette i oppgave 1a-regslag. Det er viktig å alltid sikre alle inputfelter for INJECTION.
+Men for å spare tid så har jeg valgt å kun gjøre dette 1 gang. 
+
+1a startside - sjekker date med javascript Forklarer hvordan det skal stå i placeholder
+input type number gjør at input må være heltall og min gjør at du ikke kan ha negative tall eller 0.
+Det er noe feil i javascripten som sjekker datoen. Satt fast i 30 minutter så lar denne være. 
+Men tanken er at om datoen ikke er korrekt så skal brukeren får beskjed ved en
+alert og default skal ikke skje. Det vil si at vi ikke hopper til neste side.
+
+1a regslag! Ikke fått TESTET OG BUGGFIKSET LØSNINGEN. Men tanken er å lagre 2 forskjellige mulige sider. 1 om du har sessions lagret og en om du ikke har det. 
+Det vil si om du kommmer første gangen så har du ikke session. Andre gangen har du sessions og siden vil utføre posten som du gjorde på forrige side. Ellers brukes Sesisonvariabler
+PS: Denne fungerte helt fint før jeg la til Session-delen av koden. Dessverre hadde jeg ikke tid til å debugge og ordne opp i dette.
+
+
+

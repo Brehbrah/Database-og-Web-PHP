@@ -1,0 +1,26 @@
+﻿KandidatNummer: 22
+
+Opg 3a: 
+SQL Injection er når en hacker får muligheten til å skrive egen SQL-kode direkte inn i webapplikasjonen som kan kjøres på serveren. Dette er farlig fordi hackeren kan finne sensitiv data, slette innhold eller manipulere innhold til eget ønske. Dette kan forhindres ved bruk av PHP-PREPARED STATEMENTS. Vi utfører prepare på et statement slik at databasen kan lagre hvilke parametre som skal fylles ut av brukeren. Dersom hackeren forsøker å fylle ut noe annet en parametrene som er avtalt så vil spørringen aldri gå gjennom til basen. 
+
+SESSION KAPRING - Session Kapring er når en hacker får tak i din SESSION-kode. Dette kan være farlig fordi om webserveren kun tester hvilken session som brukeren har så kan hackeren få tilgang til den sesjonen som du er i eller var i. Det kan for eks være at hackeren kommer rett inn i nettbanken din fordi webtjeneren tror at hackeren er logget inn grunnet sessionvariablene som er stjålet. 
+Vi kan forhindre dette ved å utføre flere sjekker mot SEssion-kapring. Vi kan lagre hvilken nettleser brukerne har, hvilken IP brukeren har og hvor lenge en bruker skal kunne ha session, eller om brukeren har vært "IDLE" for lenge. Dette kan vi sjekke i PHP på serveren når vi mottar requests. Vi kan eksempelvis si at det ikke er lov å være IDLE mer enn 2minutter uten å gjøre noe. Det gjør vi da ved å mellomlagre tidspunktet som siste aksjon ble utført. 
+Mange sier at denne SessionKaprings-sikringen ikke er noen god sikring. Grunen til det er at hackere som klarer å få tak i din session, er trolig smarte nok til å klare å endre de eksisterende sessionvariablene til sin fordel, slik at innebyggede sjekker ikke trigges. 
+
+CROSS SITE SCRIPTING:
+CSscripting er når en hacker lagrer en utførbar kode via en klient til databasen. Når koden kjøres hos en klient så utøres det som hackeren ønsker. Det kan være alt fra innsamling av data til å ødelegge opplevelsen av nettsiden for klientene. Eksempel på dette kan være om en bruker klarer å skrive javascript-kode inn i en inputform. Resultatet av formet skal vises på nettsiden. Nettleseren tror at det webserenen returnerer er javascript og nettleseren utfører derfor koden. Dette kan vi forhindre med å bruke HTMLEntities i PHP. HTML Entities vasker innholdet og endrer kjente tegn og stringer til ren tekst som ikke er kode.
+
+PASSWORD HASH - sharking
+Dersom passord ikke er kryptert vil disse sendes over HTTP-protokollen. Dette kan plukkes opp av hvem som helst som har tilgang til netttrafikken din. Dette kan være farlig fordi passord kan bli stjålet. 
+Vi kan forhindre dette ved å bruke HTTPS som krypterer trafikken før den sendes ut. Den dekrypteres kun av webserevren som har nøkkelen til å dekryptere dataen
+
+Opg 3b:
+REST-basert webservice er en webservice som baserer seg på http-GET/PUT kall og HTTP-response fra webserveren. En klient har tilgang til en webservice med REST og utfører sine handlinger på "nettsiden/applikasjonen". Når brukeren utfører en handling på applikasjonen så sendes det over en HTTP-request fra brukeren med angitt kode/metode for hvilken handling brukeren har utført og hva han ønsker. WEB-serveren mottar requesten, har forhåndsdefinert API som klienten også har hvor det er bestemt i forkant hva de forskjellige requestene til klientene betyr.
+I bibloteket som bestemmer dette finnes det en rekke forskjellige betydninger av URL-ene som klientene sendes i http-requestene sine og web-serveren responderer med det innholdet som bibloteket definerer. Det kan være at brukeren også sender inn en rekke parametre som igjen blir plassert inn i korrekte metoder i bibloteket. 
+
+Golf-databasen inneholder mange forskjellige tabeller som kan settes sammen på forksjellige måter. Det kan utføres forskjellige mattematiske utførelser eller visninger av dataen. Dersom opg1 webapplikasjonen hadde implementert REST-api kunne vi for eksempel hatt en webapplikasjon som kunne tilbytt oss en rekke metoder. Eksempel kunne vært:
+1. Vis HighScore på bane: ved å sende riktig URL og parametre kan REST forstå hvilken bane vi øsnker å sjekke dette for, og returnere kode som kan implementeres i DOMET til brukeren. 
+2. Vis min egen score på rune X: Igjen kunne vi sendt over request til webserveren som sender tilbake innhold via http-response som blir mottatt, behandlet og implementert til klienten.
+3. Vis PAR-oversikt på spesifisert bane: Som over request og response.
+4. Registrere antall slag kunne kanskje vært utført ved REST-api istedet for å bruke Sessions slik jeg har gjort i oppgave 1a. Her kunne metoden vært å sende inn riktige parametre og url og dette utføres på basen, deretter så blir det sendt response fra serveren som inneholder data om det er godkjent innlegging eller ikke. Om det er godkjent, så blir mang presentert med muligheten for å legge til flere, om det ikke er godkjent så får man en errormelding. 
+Klienten bytter ikke URL, men blir på stedet vil og får tildelt forksjellige data.

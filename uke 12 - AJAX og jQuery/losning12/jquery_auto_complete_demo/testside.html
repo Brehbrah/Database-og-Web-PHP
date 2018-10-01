@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Databaser og web</title>
+<meta charset="UTF-8"/>
+<script src="jquery-1.9.1.js" type="text/javascript"></script>
+<script src="custom.js" type="text/javascript"></script>
+</head>
+<body>
+
+<script type="text/javascript" charset="utf-8">
+  // For hvert tastetrykk POST'er vi til hentNavn.php,
+  // sender med innholdet av tekstboksen, sørger for
+  // at visNavn blir utført når vi får tilbake resultatet,
+  // og gir beskjed om at returdata skal kodes som JSON.
+  function haandterTast() {
+    $.post("hentNavn.php", {sendValue: $(this).val()}, visNavn, "json");
+  }
+  
+  // Registrer haandterTast som lytter til tekstboksen
+  function regLytter() {
+    $('#txtNavn').keyup(haandterTast);  
+  }
+  
+  // Vis utdata fra PHP-skript i div-boks
+  function visNavn(navn) {
+    $('#display').html(navn.treff);
+  }
+  
+  $(document).ready(regLytter);  
+  </script>
+</head>
+
+<body>
+  <p>Navn: <input type="text" id="txtNavn"></p>
+  <div id="display"></div>
+</body>
+</html>

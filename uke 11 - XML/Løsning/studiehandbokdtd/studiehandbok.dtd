@@ -1,0 +1,17 @@
+<!ELEMENT studiehandbok (oppdatert, aar, (studium)+, (emne)+)>
+<!ELEMENT oppdatert (#PCDATA)>
+<!ELEMENT aar (#PCDATA)>
+<!ELEMENT studium (studiumkode, studiumnavn, faginnhold, opptak, oppbygging)>
+<!ELEMENT studiumkode (#PCDATA)>
+<!ELEMENT studiumnavn (#PCDATA)>
+<!ELEMENT faginnhold (#PCDATA)>
+<!ELEMENT opptak (#PCDATA)>
+<!ELEMENT oppbygging (emnelink)+>
+<!ELEMENT emnelink (semester, kode)>
+<!ELEMENT semester (#PCDATA)>
+<!ELEMENT emne (kode, navn, omfang, innhold, evaluering)>
+<!ELEMENT kode (#PCDATA)>
+<!ELEMENT navn (#PCDATA)>
+<!ELEMENT omfang (#PCDATA)>
+<!ELEMENT innhold (#PCDATA)>
+<!ELEMENT evaluering (#PCDATA)>

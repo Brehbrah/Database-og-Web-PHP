@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Databaser og web</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<script type="text/javascript">
+function visPoststeder(str)
+{
+  var xmlhttp;
+  
+  // Blank ut listen hvis søkeordet er tomt
+  if (str.length==0) {
+    document.getElementById("txtPoststeder").innerHTML="";
+    return;
+  }
+  
+  // Oppretter request-objekt
+  if (window.XMLHttpRequest) {
+    // IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  }
+  else {
+    // IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+  // Knytter til anonym callback-funksjon
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      document.getElementById("txtPoststeder").innerHTML=xmlhttp.responseText;
+    }
+  }
+  
+  // Sender GET-forespørsel "bak kulissene" - nå PHP-skript med GET-parameter
+  xmlhttp.open("GET", "hent_poststed.php?postnr="+str, true);
+  xmlhttp.send();
+}
+</script>
+</head> 
+
+<body>
+
+<h3>Tast inn et postnummer</h3>
+
+<form action=""> 
+  Postnr: <input type="text" id="txtPostNr" onkeyup="visPoststeder(this.value)" />
+</form>
+
+<p>Poststeder: <span id="txtPoststeder"></span></p>
+
+</body>
+</html> 

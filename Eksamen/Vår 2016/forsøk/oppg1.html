@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+    	<h1>Oppgave 1a - Registrerings Skjema</h1>
+    	<form action="oppg1b.php" method="POST" accept-charset="utf-8" style="text-align: left;">
+    		
+    		<table border ="0">
+    			<tr>
+    				<th>Brukernavn</th>
+    				<td><input type="text" name="brukernavn" placeholder="Din E-Post"></td>
+    			</tr>
+    			<tr>
+    				<th>Beskrivelse</th>
+    				<td><input type="text" name="beskrivelse" placeholder="Vare Beskrivelse"></td>
+    			</tr>
+    			<tr>
+    				<th>Kat.Type</th>
+    				<td>
+    					<select name="katnr">
+    						<option value="1">Hageredskaper</option>
+    						<option value="2">Verktøy</option>
+    						<option value="3">Sportsutstyr</option>
+    					</select>
+    				</td>
+    			</tr>
+    			<tr>
+    				<th>Pris</th>
+    				<td><input type="text" name="pris" placeholder="Mellom 20 og 2000 KR."></td>
+    			</tr>
+    		</table>
+    		<p>
+    			<button type="submit">submit</button>
+    			<button type="reset">Rensk Skjema</button>
+    		</p>
+    	</form>
+    </body>
+</html>

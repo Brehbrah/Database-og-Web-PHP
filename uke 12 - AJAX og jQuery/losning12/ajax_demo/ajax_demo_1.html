@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Databaser og web</title>
+<meta charset="UTF-8"/>
+<script type="text/javascript">
+var xmlhttp;
+
+function settOverskrift() {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+    document.getElementById("overskrift").innerHTML=xmlhttp.responseText;
+  }
+}
+
+function haandterKlikk() {
+  if (window.XMLHttpRequest) {
+    // IE7+, Firefox, Chrome, Opera, Safari  
+    xmlhttp=new XMLHttpRequest(); 
+  }
+  else { 
+    // IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); 
+  }
+  
+  // Knytter til "callback-funksjonen" 
+  xmlhttp.onreadystatechange = settOverskrift;
+  
+  // Sender GET-forespørsel "bak kulissene"
+  xmlhttp.open("GET", "ny_overskrift.html", true);
+  xmlhttp.send();
+}
+</script>
+
+</head> 
+
+<body>
+
+<div id="overskrift">
+<h2>Overskrift som skal endres...</h2>
+</div>
+
+<button type="button" onclick="haandterKlikk()">Endre overskrift!</button>
+
+</body>
+</html> 

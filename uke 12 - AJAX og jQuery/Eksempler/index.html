@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <script>
+        	$(document).ready(function() {
+        		$("#btn").click(function() {
+        			$("#test").load("data.txt", {
+        				Name: "Daniel", 
+        				Lastname: "Nielson",
+        				function() {
+        					alert("Hi There!")
+        				}
+        			});
+        		});
+        	});
+        </script>
+    </head>
+    <body>
+        <div id="test">
+        	<p>This is the first content!</p>	
+        </div>
+        <button id="btn">Click to Change</button>
+    </body>
+</html>

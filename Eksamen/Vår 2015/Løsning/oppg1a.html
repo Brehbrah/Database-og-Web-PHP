@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Databaser og web</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="oppg1a.css" />
+</head>
+
+<body>
+
+<div class="innhold">
+
+<h1>Oppgave 1: Registrere presentasjon</h1>
+
+<form id="regskjema" action="oppg1b.php" method="POST">
+	  
+  <div class="obligatorisk">
+    <label>Rom:</label>
+    <select name="romkode" id="romkode">
+      <option value="A-204">A-204</option>
+      <option value="A-205">A-205</option>
+      <option value="B-113">B-113</option>
+    </select>
+  </div>
+  
+  <div class="obligatorisk">
+    <label>Dato:</label>
+	  <input type="text" name="dato" id="dato">
+  </div>
+  
+  <div class="obligatorisk">
+    <label>Fra kl.:</label>
+	  <input type="text" name="kl_fra" id="kl_fra">
+  </div>
+  
+  <div class="obligatorisk">
+    <label>Til kl.:</label>
+	  <input type="text" name="kl_til" id="kl_til">
+  </div>
+
+  <div class="valgfri">
+    <label>E-post:</label>
+    <input type="text" name="epost" id="epost">
+  </div>
+
+  <div class="obligatorisk">
+    <label>Tittel:</label>
+    <input type="text" name="tittel" id="tittel">
+  </div>
+
+  <p><input id="submit" type="submit" value="Registrer presentasjon!"></p>
+  
+  <div id="melding"></div>
+  
+</form>
+
+<script src="oppg1a.js"></script>
+
+</div>
+
+</body>
+
+</html>

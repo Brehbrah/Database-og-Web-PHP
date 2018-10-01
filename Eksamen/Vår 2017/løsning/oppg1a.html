@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Untitled</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="author" href="humans.txt">
+	</head>
+	<body>
+		<h1>Oppgave 1a - Lage Skjema</h1>
+		<form action="oppg1c.php" id="regSkjema" method="POST" accept-charset="utf-8" style="text-align: left;">
+			<table border="0">
+				<tr>
+					<th>Anr: </th>
+					<td><input type="text" id="anr" name="anr"></td>
+				</tr>
+				<tr>
+					<th>Beskrivelse: </th>
+					<td><input type="text" id="beskrivelse" name="beskrivelse"></td>
+				</tr>
+				<tr>
+					<th>Transportmiddel: </th>
+					<td>
+						<select name="tnr">
+							<option value="1">Tog</option>
+							<option value="2">Bil</option>
+							<option value="3">Fly</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>Dato: </th>
+					<td><input type="text" id="dato" name="dato" placeholder="YYYY-MM-DD"></td>
+				</tr>
+				<tr>
+					<th>Ant.km: </th>
+					<td><input type="text" id="km" name="km"></td>
+				</tr>
+			</table>
+			<p>
+
+				<div id="melding">
+					
+				</div>
+
+				<button type="submit" id="submit" name="submit">Send Forespørsel</button>
+				<button type="reset">Rensk Forespørsel</button>
+			</p>
+		</form>
+
+
+		
+		<script src="oppg1a.js"></script>
+	</body>
+</html>

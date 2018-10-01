@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Databaser og web || Vår 2016 Eksamen</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="author" href="humans.txt">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<h1>Oppgave 1a</h1>
+		
+		<form action="oppg1b.php" id="regskjema" method="POST" accept-charset="utf-8" style="text-align: left;">
+			
+			<table border="0">
+
+				<tr>
+					<th>Brukernavn:</th>
+					<td><input type="text" id="brukernavn" name="brukernavn" placeholder="e-post"></td>
+				</tr>
+				<tr>
+					<th>Beskrivelse:</th>
+					<td><input type="text" name="beskrivelse" id="beskrivelse" size="20" required></td>
+				</tr>
+				<tr>
+					<th>Kategori:</th>
+					<td>
+						<select name="katnr" id="katnr">
+							<option value="1">Hageredskaper</option>
+							<option value="2">Verktøy</option>
+							<option value="3">Sportsutstyr</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>Dagspris:</th>
+					<td>
+						<input type="text" name="dagspris" id="dagspris" size="20" placeholder="Dagspris 0 til 2000 kr" required>
+					</td>
+				</tr>
+			</table>
+			<p>
+				<button type="submit" required>Bekreft Ordre</button>
+				<button type="reset">Rensk Skjema</button>
+			</p>
+
+			<div id="melding"></div>
+
+		</form>
+		
+	</body>
+</html>

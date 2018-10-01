@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE studiehandbok SYSTEM "studiehandbok.dtd">
+<?xml-stylesheet type="text/xsl" href="studiehandbokoppslag.xsl"?>
+<studiehandbok>
+  <oppdatert>2006-09-17</oppdatert>
+  <aar>2006</aar>
+  <studium>
+    <studiumkode>220 187</studiumkode>
+    <studiumnavn>1-årig informatikk</studiumnavn>
+    <faginnhold>
+      Studiet gir en praktisk innføring i sentrale teknikker, metoder og verktøy innen informasjonsteknologi (IT).
+    </faginnhold>
+    <opptak>
+      Opptakskrav er generell studiekompetanse. Søkjarar som er 25 år eller eldre kan også bli tekne opp på grunnlag av realkompetanse etter nærare reglar.</opptak>
+    <oppbygging>
+      <emnelink>
+        <semester>1</semester>
+        <kode>5601</kode>
+      </emnelink>
+      <emnelink>
+        <semester>1</semester>
+        <kode>5602</kode>
+      </emnelink>
+      <emnelink>
+        <semester>1</semester>
+        <kode>5604</kode>
+      </emnelink>
+      <emnelink>
+        <semester>2</semester>
+        <kode>5605</kode>
+      </emnelink>
+      <emnelink>
+        <semester>2</semester>
+        <kode>5606</kode>
+      </emnelink>
+      <emnelink>
+        <semester>2</semester>
+        <kode>5608</kode>
+      </emnelink>
+    </oppbygging>
+  </studium>
+  <emne>
+    <kode>5601</kode>
+    <navn>Maskin- og programvare</navn>
+    <omfang>10 studiepoeng</omfang>
+    <innhold>
+      Den historisk-teknologiske utviklingen av datamaskiner, programmer og programmeringsspråk. Digital representasjon av data, datamaskinarkitektur, operativsystemer, kontorstøtteverktøy, personvern og sikkerhet. Bruk av informasjonsteknologi.</innhold>
+    <evaluering>
+      Individuell, 2 timers skriftlig midtprøve, 1-3 gruppebasert innleveringsoppgave(r), og en individuell, skriftlig 3 timers skriftlig sluttprøve. Midtprøven teller 40% og sluttprøven teller 60% av samlet karakter, hjemmeoppgavene må være levert og
+      bestått. Alle delprøver må vere bestått.
+    </evaluering>
+  </emne>
+  <emne>
+    <kode>5602</kode>
+    <navn>Databasar I</navn>
+    <omfang>10 studiepoeng</omfang>
+    <innhold>
+      SQL og relasjonsmodellen, dataorientert systemutvikling (datamodellering) med E/R, realisering av E/R-modellar som relasjonsdatabasar, normaliseringsteori, applikasjonsutvikling, databaseadministrasjon, oppbygging og virkemåte til
+      databasehandteringssystem. Innføring i objektorienterte databaseprogram.
+    </innhold>
+    <evaluering>
+      1 times individuell, skriftleg midtprøve, 1-3 individuelle heimeoppgåve(r) og ei individuell, skriftleg 3 timars sluttprøve. Midtprøva tel 20% av samla karakter, heimeoppgåvene tel 20% og sluttprøva tel 60%.
+    </evaluering>
+  </emne>
+  <emne>
+    <kode>5604</kode>
+    <navn>Multimedia</navn>
+    <omfang>10 studiepoeng</omfang>
+    <innhold>
+      Teori om og øving i bruk av tekst, grafikk, bilete, lyd, animasjon og video. Ulike typer utstyr og teknikkar for fangst, omforming, lagring og presentasjon av slike medium. Integrasjon og distribusjon over nett. Øvingane er baserte på bruk av multimedia
+      verktøy.
+    </innhold>
+    <evaluering>
+      1 times individuell, skriftleg midtprøve, 1-3 gruppeheimeoppgåve(r), og ei individuell, skriftleg 4 timars sluttprøve. Midtprøva tel 20% av samla karakter, heimeoppgåvene tel 20%, og sluttprøva tel 60%.
+    </evaluering>
+  </emne>
+  <emne>
+    <kode>5606</kode>
+    <navn>Internett og intranett</navn>
+    <omfang>10 studiepoeng</omfang>
+    <innhold>
+      Internetts oppbygging og virkemåte. Sentrale internett-applikasjonar som e-post og web (verdsveven), informasjonssøking, filoverføring, diskusjonsgrupper (News) og fjerninnlogging. HTML-standarden og litt om andre dokumentstandarder som er relevante for web. Utvikling av statiske og dynamiske web-dokument med dokumentprosessering på klientsida (stilreglar og skriptspråk), samt ei orientering om teknikkar for dokumentprosessering på tenersida. Gruppevare og intranett. Tryggleik i internett og intranett, med t.d. kryptering. Vurderingar ved innkjøp og etablering av ulike internett- og intranettenester. Praktiske øvingar i bruk av internett og utvikling av HTML-dokument.
+    </innhold>
+    <evaluering>
+      1 times individuell, skriftleg midtprøve, 1-3 gruppeheimeoppgåve(r), og ei individuell, skriftleg 3 timars sluttprøve. Midtprøva tel 20% av samla karakter, heimeoppgåven tel 20%, og sluttprøva tel 60%.
+    </evaluering>
+  </emne>
+  <emne>
+    <kode>5608</kode>
+    <navn>Objektbasert programmering</navn>
+    <omfang>10 studiepoeng</omfang>
+    <innhold>
+      Program og programutføring. Programmeringsverkty. Grafiske brukargrensesnitt og hendingsutløyst programmering. Datastrukturar og kontrollstrukturar. Prosedyrar og topp-ned problemløysing. Innføring i objektorientert programmering. Filhandtering og databaseprogrammering. Dokumentasjon, testing og avlusing.
+    </innhold>
+    <evaluering>
+      1 times individuell, skriftleg midtprøve, 1-3 individuelle heimeoppgåve(r) og ei individuell, skriftleg 3 timars sluttprøve. Midtprøva tel 20% av samla karakter, heimeoppgåvene tel 20% og sluttprøva tel 60%.
+    </evaluering>
+  </emne>
+  <emne>
+    <kode>5605</kode>
+    <navn>Datanett</navn>
+    <omfang>10 studiepoeng</omfang>
+    <innhold>
+      Maskinvare i lokalnett, design av lokalnett, topologi. Kommunikasjon mot periferutstyr, modemkommunikasjon, ISDN. Tenester i lokalnett og fjernnett, klient-tenar-system. Nettovervakingssystem med vekt på sikkerhet, logging og rapportering. Praktisk øving i bruk, organisering og drifting av PC-baserte lokalnett.
+    </innhold>
+    <evaluering>
+      Skriftlig individuell midtprøve, 2 timer, teller 40%. Skriftlig individuell sluttprøve, 3 timer, teller 60% Obligatorisk arbeid på labben må godkjennast før ein kan gå opp til eksamen.
+    </evaluering>
+  </emne>
+</studiehandbok>

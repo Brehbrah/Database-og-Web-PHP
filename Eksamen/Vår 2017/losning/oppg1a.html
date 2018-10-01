@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Databaser og web</title>
+  <meta charset="UTF-8" />
+  <script src="oppg1a.js" defer></script>
+</head>
+
+<body>
+
+<h1>Oppgave 1a: Registrere enkel reise</h1>
+
+<form id="regskjema" action="oppg1c.php" method="POST">
+
+  <p>
+    <label>Ansattnr:</label>
+    <input type="number" name="anr" id="anr" required>
+  </p>
+
+  <p>
+    <label>Beskrivelse:</label>
+    <input type="text" name="beskrivelse" id="beskrivelse" required>
+  </p>
+  
+  <p>
+    <label>Dato:</label>
+    <input type="text" name="dato" id="dato" required>
+  </p>
+
+  <p>
+    <label>Transportmiddel:</label>
+    <select name="tnr" id="tnr">
+      <option value="1" selected>Tog</option>
+      <option value="2">Bil</option>
+      <option value="3">Fly</option>
+    </select>
+  </p>
+
+  <p>
+    <label>Antall km:</label>
+    <input type="number" min="1" name="antkm" id="antkm" required>
+  </p>
+
+  <p>
+    <input id="submit" type="submit" value="Registrer reise">
+  </p>
+  
+  <div id="melding"></div>
+  
+</form>
+
+</body>
+
+</html>

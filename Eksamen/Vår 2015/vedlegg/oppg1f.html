@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--
+
+Koden på denne filen er kun ment som et utgangspunkt,
+du må gjøre flere endringer!
+
+-->
+
+<meta charset="UTF-8" />
+<script type="text/javascript">
+function hentSvar() {
+  var xmlhttp;
+  
+  if (window.XMLHttpRequest) {
+    xmlhttp=new XMLHttpRequest();
+  }
+  else {
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      alert("Svar mottatt!");
+    }
+  }
+  
+  xmlhttp.open("GET", "oppg1f.php", true);
+  xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<h3>Oppgave 1f</h3>
+
+<form action=""> 
+  <p>Finn presentasjoner som inneholder søkeord i tittelen:</p>
+  <p><input type="text" id="txtSok" onkeyup="hentSvar()" /></p>
+</form>
+
+<div id="svar">Her skal titlene bli vist!</div>
+
+</body>
+</html> 
