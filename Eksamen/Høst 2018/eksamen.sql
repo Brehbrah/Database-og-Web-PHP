@@ -1,5 +1,6 @@
 ﻿-- Eksamen 6065 Database og web 2018 høst.
 -- Skript for å generere eksempeldatabasen.
+-- Det fungerer ikke å importere direkte fra phpmyadmin. Du er nødt til å kopiere hele skriptet på SQL'en for å kjøre gjennom skriptet
 
 DROP TABLE IF EXISTS ProduktIReise;
 DROP TABLE IF EXISTS Reise;
